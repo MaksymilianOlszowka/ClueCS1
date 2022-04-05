@@ -1,0 +1,57 @@
+int CardClass()
+{
+	const int CharacterNum = 6;
+	const int WeaponNum = 6;
+	const int locationNum = 9;
+	int i = 0;
+	string CharacterArray[CharacterNum];
+	string WeaponArray[WeaponNum];
+	string LocationArray[locationNum];
+
+
+	CharacterArray[0] = "Professor Blum";
+	CharacterArray[1] = "Mrs. White";
+	CharacterArray[2] = "Mr. Green";
+	CharacterArray[3] = "Mrs. Peacock";
+	CharacterArray[4] = "Colonel Mustard";
+	CharacterArray[5] = "Mrs. Scarlett";
+
+	WeaponArray[0] = "Candle Stick";
+	WeaponArray[1] = "Knife";
+	WeaponArray[2] = "Lead Pipe";
+	WeaponArray[3] = "Rope";
+	WeaponArray[4] = "Wrench";
+	WeaponArray[5] = "Pistol";
+
+	LocationArray[0] = "Dinning Room";
+	LocationArray[1] = "Billiard Room";
+	LocationArray[2] = "Study";
+	LocationArray[3] = "Conservatory";
+	LocationArray[4] = "Library";
+	LocationArray[5] = "Ballroom";
+	LocationArray[6] = "Lounge";
+	LocationArray[7] = "Hall";
+	LocationArray[8] = "Kitchen";
+
+
+	cout << "Here are your characters: ";
+	for (int i = 0; i < CharacterNum; ++i) {
+		cout << CharacterArray[i] << " ";
+	}
+
+	cout << endl;
+
+	cout << "Here are your Weapons: ";
+	for (int i = 0; i < WeaponNum; ++i) {
+		cout << WeaponArray[i] << " ";
+	}
+
+	cout << endl;
+
+	cout << "Here are your Locations: ";
+	for (int i = 0; i < locationNum; ++i) {
+		cout << LocationArray[i] << " ";
+	}
+	cout << endl;
+	cout << endl;
+}
