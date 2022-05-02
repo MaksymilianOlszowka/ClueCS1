@@ -1,0 +1,52 @@
+// Clue Card Giving.cpp :
+
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+using namespace std;
+
+string characters[] = { "Professor Blum", "Mrs. White", "Mr. Green", "Mrs. Peacock", "Colonel Mustard", "Mrs. Scarlett"};
+string weapons[] = { "Candle Stick", "Knife", "Lead Pipe", "Rope", "Wrench", "Pistol"};
+string location[] = { "Dining Room", "Billiard Room", "Study", "Conservatory", "Library", "Ballroom", "Lounge", "Hall", "Kitchen" };
+
+
+int main()
+{
+	string characters[] = { "Professor Blum", "Mrs. White", "Mr. Green", "Mrs. Peacock", "Colonel Mustard", "Mrs. Scarlett" };
+	string weapons[] = { "Candle Stick", "Knife", "Lead Pipe", "Rope", "Wrench", "Pistol" };
+	string location[] = { "Dining Room", "Billiard Room", "Study", "Conservatory", "Library", "Ballroom", "Lounge", "Hall", "Kitchen" };
+
+	const int characterNum = 6;
+	const int weaponNum = 6;
+	const int locationNum = 9;
+	int randNum;
+	int i = 0;
+
+	srand(time(0));
+	
+	cout << "Here are your characters: ";
+	for (int i = 0; i < 40; ++i) {
+		randNum = rand() % 7 - 1;
+		if (characters[randNum] == "x") {
+			--i;
+		}
+		else {
+			cout << characters[randNum] << ", ";
+		}
+		characters[randNum] = "x";
+	}
+
+	cout << endl;
+
+	/*cout << "Here are your Weapons: ";
+	for (int i = 0; i < WeaponNum; ++i) {
+		cout << weapons << " ";
+	}
+
+	cout << endl;
+
+	cout << "Here are your Locations: ";
+	for (int i = 0; i < locationNum; ++i) {
+		cout << location << " ";
+	}*/
+}
