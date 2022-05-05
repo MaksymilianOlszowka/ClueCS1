@@ -1,12 +1,12 @@
 int CardClass()
 {
-	const int CharacterNum = 6;
-	const int WeaponNum = 6;
-	const int locationNum = 9;
+	const int CharacterNum = 6 // exact amount of characters
+	const int WeaponNum = 6; // exact amount of wepons in the game
+	const int locationNum = 9; // exact amount of locations in the game
 	int i = 0;
 	string CharacterArray[CharacterNum];
 	string WeaponArray[WeaponNum];
-	string LocationArray[locationNum];
+	string LocationArray[locationNum]; // possible 4D Array here, not sure how to dispaly
 
 
 	CharacterArray[0] = "Professor Blum";
