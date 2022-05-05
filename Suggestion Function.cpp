@@ -125,10 +125,10 @@ void printNotes(char colMust, char profPlum, char mrGreen, char mrsPcock, char m
 
 void detectiveNotes() {
     int usrChoice, usrChoice2; // usrChoice determines the first thing the player would like to mark (Suspects, weapons, rooms). usrChoice2 lets the player choose what they would like to mark within the list.
-    char usrChoice3; // usrChoice 3 lets the player mark either an X or an O next to a suspect, weapon, or room.
+    char usrChoice3;
     char extChoice = '\0'; // extChoice allows player to determine if they would like to mark the detective notes more, or whether to quit the detective notes portion.
 
-    char colMust = ' ';        // The char variables from line 135-157 is what will be changed when the user inputs 'X' or 'O' when making deductions.
+    char colMust = ' ';       
     char profPlum = ' ';
     char mrGreen = ' ';
     char mrsPcock = ' ';
@@ -151,17 +151,11 @@ void detectiveNotes() {
     char rmBilliardRm = ' ';
     char rmLibrary = ' ';
     char rmStudy = ' ';
-
-    //How to create a predefined case File?
-
-
-
-
-
+    
     do {
         printNotes(colMust, profPlum, mrGreen, mrsPcock, msScar, mrsWhite, wpnKnife, wpnCandle, wpnPistol, wpnRope, wpnLead, wpnWrench, rmHall, rmLounge, rmDiningRm, rmKitchen, rmBallRm, rmConserv, rmBilliardRm, rmLibrary, rmStudy); // Prints the detective notes.
 
-        cout << "What would you like to suggest first?\n\n\t1. Suspects\n\t2. Weapons\n\t3. Rooms\n\nEnter (1-3) : ";
+        cout << "What would you like to suggest first?\n\n\t1. Suspects\n\t2. Weapons\n\t3. Rooms\n\nEnter (1-3) : "; // this option allows the user to choice which char, wpn, location the case file is in
         cin >> usrChoice;
         cout << "\n";
 
@@ -211,7 +205,7 @@ void detectiveNotes() {
             }
         case 2:
             cout << "What weapon would you like to suggest?\n\n\t1. Knife\n\t2. Candlestick\n\t3. Pistol\n\t4. Rope\n\t5. Lead Pipe\n\t6. Wrench\n\t7. Skip\n\nEnter (1-7) : ";
-            cin >> usrChoice2;
+            cin >> usrChoice2; // instead of the notes file it already determins the exact character
             switch (usrChoice2) {
             case 1:
                 if (usrChoice2 == 1) {
@@ -407,9 +401,9 @@ void detectiveNotes() {
             
 
             cout << "Are your suggests correct? (y/n): "; // if y then it couts the X, if n then go back to the loop.
-            cin >> extChoice;
-        }
-        //attempt to lopp to change the userchoices
+            cin >> extChoice; // extchoice allows for the user to exit out of the loop and move to the next player.
+        } // loops again like the notes but need to change it in the main program
+        
     } while (extChoice == 'n');// Keeps running the switch statements until the player inputs 'n' for extChoice, found on line 518.
     if (extChoice == 'y') { // Stops the user from making more marks on the notes when they input 'n'.
         printNotes(colMust, profPlum, mrGreen, mrsPcock, msScar, mrsWhite, wpnKnife, wpnCandle, wpnPistol, wpnRope, wpnLead, wpnWrench, rmHall, rmLounge, rmDiningRm, rmKitchen, rmBallRm, rmConserv, rmBilliardRm, rmLibrary, rmStudy); // Prints the detective notes one more time.
