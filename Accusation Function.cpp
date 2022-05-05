@@ -6,7 +6,7 @@ using namespace std;
 
 void printNotes(char colMust, char profPlum, char mrGreen, char mrsPcock, char msScar, char mrsWhite, char wpnKnife, char wpnCandle, char wpnPistol, char wpnRope, char wpnLead, char wpnWrench, char rmHall, char rmLounge, char rmDiningRm, char rmKitchen, char rmBallRm, char rmConserv, char rmBilliardRm, char rmLibrary, char rmStudy) { // Prints the notes. Reduces redundancy in code, easier to read.
 
-    cout << "\FINAL ACCUSATION\n\n";
+    cout << "\FINAL ACCUSATION\n\n"; // allows the user to verify that they are doing their final accusation
 
     cout << "Suspects\n";
     cout << "_______________\n";
@@ -125,10 +125,10 @@ void printNotes(char colMust, char profPlum, char mrGreen, char mrsPcock, char m
 
 void detectiveNotes() {
     int usrChoice, usrChoice2; // usrChoice determines the first thing the player would like to mark (Suspects, weapons, rooms). usrChoice2 lets the player choose what they would like to mark within the list.
-    char usrChoice3; // usrChoice 3 lets the player mark either an X or an O next to a suspect, weapon, or room.
-    char extChoice = '\0'; // extChoice allows player to determine if they would like to mark the detective notes more, or whether to quit the detective notes portion.
+    char usrChoice3; 
+    char extChoice = '\0'; 
 
-    char colMust = ' ';        // The char variables from line 135-157 is what will be changed when the user inputs 'X' or 'O' when making deductions.
+    char colMust = ' ';       
     char profPlum = ' ';
     char mrGreen = ' ';
     char mrsPcock = ' ';
@@ -252,7 +252,7 @@ void detectiveNotes() {
             case 7:
                 break;
             }
-            /* case 3:  // need to integrate player location to the suggestion and accusation.
+            /* case 3:  // need to integrate player location to the suggestion and accusation. // this is kept here but is deleted in the main code because location is based off of palyers location.
                  cout << "What room would you like to suspect?\n\n\t1. Hall\n\t2. Lounge\n\t3. Dining Room\n\t4. Kitchen\n\t5. Ball Room\n\t6. Conservatory\n\t7. Billiard Room\n\t8. Library\n\t9. Study\n\t10. Skip\n\nEnter (1-10) : ";
                  cin >> usrChoice2;
                  switch (usrChoice2) {
@@ -407,7 +407,7 @@ void detectiveNotes() {
 
 
             cout << "Is your final accusation correct? (y/n): "; // if y then it couts the X, if n then go back to the loop.
-            cin >> extChoice;
+            cin >> extChoice; // still creats and x  on the notes section 
         }
         //attempt to lopp to change the userchoices
     } while (extChoice == 'n');// Keeps running the switch statements until the player inputs 'n' for extChoice, found on line 518.
