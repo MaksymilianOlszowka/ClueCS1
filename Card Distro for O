@@ -1,0 +1,69 @@
+#include <iostream>
+#include <string>
+#include <ctime>
+using namespace std;
+
+class Cards 
+{
+public:
+	string setCharacters();
+	string setWeapons();
+	string setLocations();
+	string setcaseFile(string randCard1, string randCard2, string randCard3);
+	void getcaseFile();
+
+private:
+	string randCard1, randCard2, randCard3;
+	string caseFile[3] = { randCard1, randCard2, randCard3 };
+};
+
+string Cards::setCharacters() 
+{
+	    string characters[6] = { "Professor Blum", "Mrs. White", "Mr. Green", "Mrs. Peacock", "Colonel Mustard", "Mrs. Scarlett" };
+		srand(time(0));
+		
+		int randomCards1 = (rand() % 6);
+		string randCard1 = characters[randomCards1];
+		return randCard1;
+}
+
+string Cards::setWeapons()
+{
+	string weapons[6] = { "Candle Stick", "Knife", "Lead Pipe", "Rope", "Wrench", "Pistol" };
+	srand(time(0));
+
+	int randomCards2 = (rand() % 6);
+	string randCard2 = weapons[randomCards2];
+	return randCard2;
+
+}
+
+string Cards::setLocations()
+{
+	string location[9] = { "Dining Room", "Billiard Room", "Study", "Conservatory", "Library", "Ballroom", "Lounge", "Hall", "Kitchen" };
+	srand(time(0));
+
+	int randomCards3 = (rand() % 9);
+	string randCard3 = location[randomCards3];
+	return randCard3;
+}
+
+string Cards::setcaseFile(string randCard1, string randCard2, string RandCard3)
+{
+	return randCard1, randCard2, randCard3;
+}
+
+void Cards::getcaseFile() {
+	cout << randCard1
+}
+
+int main()
+{
+	Cards Big3;
+
+	Big3.setCharacters();
+	Big3.setWeapons();
+	Big3.setLocations();
+	Big3.getcaseFile();
+
+}
