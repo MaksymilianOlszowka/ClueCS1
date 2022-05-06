@@ -1,0 +1,19 @@
+//
+//  main.cpp
+//  Integration 2
+//
+//  Created by Maksymilian Olszowka on 5/5/22.
+//
+
+#include <iostream>
+#include "Player.hpp"
+#include "Card Functions.hpp"
+using namespace std;
+
+int main() {
+    
+    getcaseFile();
+    
+    return 0;
+    
+}
