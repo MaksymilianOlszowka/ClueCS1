@@ -150,8 +150,8 @@ retryPlayerChoice:
                 }
                 if (playerMenu == 7) {
                     playerEndTurnChoice = 1;
-                    for (int i = 0; i < 100; i++) {      // For clearing the terminal, prevents players from cheating
-                        cout << "\n\n\n\n\n\n\n";
+                    for (int i = 0; i < 1000; i++) {      // For clearing the terminal, prevents players from cheating
+                        cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
                         
                     }
                 }
